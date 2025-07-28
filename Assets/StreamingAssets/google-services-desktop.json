@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "719962795467",
+    "project_id": "aralenseapp",
+    "storage_bucket": "aralenseapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:719962795467:android:151c4a27273772afa25a4e",
+        "android_client_info": {
+          "package_name": "com.arkcam.ARALENSEAPP"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJlxFUOfbYfOet1YDPopMg-sAHTYRUn0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

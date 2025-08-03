@@ -942,7 +942,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdae47c44636e8243a1904620df55438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settingsPanel: {fileID: 623744655}
 --- !u!4 &436601451
 Transform:
   m_ObjectHideFlags: 0
@@ -4233,7 +4232,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2144297193
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4298,19 +4297,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2144297195}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 436601450}
-        m_TargetAssemblyTypeName: Navbar, Assembly-CSharp
-        m_MethodName: OpenSettings
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2144297195
 MonoBehaviour:
   m_ObjectHideFlags: 0

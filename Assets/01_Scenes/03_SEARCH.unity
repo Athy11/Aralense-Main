@@ -1873,7 +1873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1880333710}
   - component: {fileID: 1880333709}
-  - component: {fileID: 1880333708}
+  - component: {fileID: 1880333711}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1881,26 +1881,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1880333708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880333707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &1880333709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1931,6 +1911,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1880333711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880333707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
 --- !u!1 &1893655762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1940,7 +1951,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1893655765}
-  - component: {fileID: 1893655764}
   - component: {fileID: 1893655763}
   m_Layer: 0
   m_Name: Script I
@@ -1961,47 +1971,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1302ec3c5b4ebcd47bb780046770081f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1893655764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893655762}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 403520f9c3385ab47a27e1cc8a49484e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loginPanel: {fileID: 0}
-  signupPanel: {fileID: 0}
-  profilePanel: {fileID: 0}
-  forgotPassPanel: {fileID: 0}
-  notifPanel: {fileID: 0}
-  posNotifPanel: {fileID: 0}
-  homePanel: {fileID: 0}
-  navbar: {fileID: 0}
-  confirmationPanel: {fileID: 0}
-  privacyPolicyPanel: {fileID: 0}
-  settingsPanel: {fileID: 0}
-  editProfPanel: {fileID: 0}
-  loginEmail: {fileID: 0}
-  loginUsername: {fileID: 0}
-  loginPass: {fileID: 0}
-  signupName: {fileID: 0}
-  signupEmail: {fileID: 0}
-  signupUsername: {fileID: 0}
-  signupPass: {fileID: 0}
-  signupCPass: {fileID: 0}
-  forgetPassEmail: {fileID: 0}
-  signupSection: {fileID: 0}
-  notif_Title: {fileID: 0}
-  notif_Message: {fileID: 0}
-  headUname: {fileID: 0}
-  profileName: {fileID: 0}
-  profileEmail: {fileID: 0}
-  profileUsername: {fileID: 0}
-  profileSection: {fileID: 0}
 --- !u!4 &1893655765
 Transform:
   m_ObjectHideFlags: 0

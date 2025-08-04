@@ -151,6 +151,11 @@ public class LoginRegister : MonoBehaviour
         SceneManager.LoadScene("01_STARTING");
     }
 
+    public void LoadQuiz()
+    {
+        SceneManager.LoadScene("05_QUIZ");
+    }
+
 
 
     public void LoginUser()

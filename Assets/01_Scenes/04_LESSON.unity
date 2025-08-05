@@ -1290,7 +1290,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 48694122}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2144742917}
+        m_TargetAssemblyTypeName: quarters, Assembly-CSharp
+        m_MethodName: LoadQ1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &48694122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7542,7 +7554,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 403374818}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2144742917}
+        m_TargetAssemblyTypeName: quarters, Assembly-CSharp
+        m_MethodName: ShowQ2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &403374818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17470,7 +17494,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 753081432}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2144742917}
+        m_TargetAssemblyTypeName: quarters, Assembly-CSharp
+        m_MethodName: ShowQ4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &753081432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26183,7 +26219,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1157962974}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2144742917}
+        m_TargetAssemblyTypeName: quarters, Assembly-CSharp
+        m_MethodName: ShowQ3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1157962974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49960,7 +50008,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2073296847}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2144742917}
+        m_TargetAssemblyTypeName: quarters, Assembly-CSharp
+        m_MethodName: ShowQ1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2073296847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51300,6 +51360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2144742916}
   - component: {fileID: 2144742915}
+  - component: {fileID: 2144742917}
   m_Layer: 0
   m_Name: Script I
   m_TagString: Untagged
@@ -51335,6 +51396,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2144742917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144742914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5fd5ff256021e48bff1313fc195f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quarter1: {fileID: 1518765363}
+  quarter2: {fileID: 98444154}
+  quarter3: {fileID: 1769923057}
+  quarter4: {fileID: 1538553469}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

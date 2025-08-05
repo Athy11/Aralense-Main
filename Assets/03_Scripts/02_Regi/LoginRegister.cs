@@ -10,6 +10,9 @@ using Firebase.Auth;
 using System;
 using System.Threading.Tasks;
 using Firebase.Extensions;
+using Google;
+using System.Net.Http;
+using System.Security.Cryptography;
 
 public class LoginRegister : MonoBehaviour
 {
@@ -18,11 +21,25 @@ public class LoginRegister : MonoBehaviour
     public TMP_Dropdown signupSection;
     public TMP_Text notif_Title, notif_Message, posNotif_Title, posNotif_Message;
     public TMP_Text headUname, profileName, profileEmail, profileUsername, profileSection;
+    public string GoogleWebAPI = "719962795467-hb7666k8ik79qpj0bmt1910pe1ovsv6g.apps.googleusercontent.com";
+   
 
+    private GoogleSignInConfiguration configuration;
+
+   
     Firebase.Auth.FirebaseAuth auth;
     Firebase.Auth.FirebaseUser user;
 
     bool isSignIn = false;
+
+    void Awake()
+    {
+        configuration = new GoogleSignInConfiguration
+        {
+            WebClientId = GoogleWebAPI,
+            RequestIdToken = true
+        };
+    }
 
     private void Start()
     {
@@ -56,6 +73,58 @@ public class LoginRegister : MonoBehaviour
             }
         });
     }
+
+    public void GoogleSignInClick()
+    {
+        GoogleSignIn.Configuration = configuration;
+        GoogleSignIn.Configuration.UseGameSignIn = false;
+        GoogleSignIn.Configuration.RequestIdToken = true;
+        GoogleSignIn.Configuration.RequestEmail = true;
+
+        GoogleSignIn.DefaultInstance.SignIn().ContinueWithOnMainThread(OnGoogleSignIn);
+    }
+
+    public void OnGoogleSignIn(Task<GoogleSignInUser> task)
+    {
+        if (task.IsCanceled)
+        {
+            Debug.LogError("Google Sign-In canceled.");
+            ShowNotification("Error", "Google Sign-In canceled.");
+            return;
+        }
+        else if (task.IsFaulted)
+        {
+            Debug.LogError("Google Sign-In encountered an error: " + task.Exception);
+            ShowNotification("Error", "Google Sign-In failed.");
+            return;
+        }
+        else
+        {
+            Firebase.Auth.Credential credential = Firebase.Auth.GoogleAuthProvider.GetCredential(task.Result.IdToken, null);
+            auth.SignInWithCredentialAsync(credential).ContinueWithOnMainThread(task =>
+            {
+                if (task.IsCanceled)
+                {
+                    Debug.LogError("SignInWithCredentialAsync was canceled.");
+                    return;
+                }
+                if (task.IsFaulted)
+                {
+                    Debug.LogError("SignInWithCredentialAsync encountered an error: " + task.Exception);
+                    ShowNotification("Error", "Google Sign-In failed.");
+                    return;
+                }                                         
+
+                ShowPosNotification("Congrats", "Login successful.");
+                ShowHomePanel();
+           
+            });
+        }
+    }
+
+
+
+   
 
     public void ShowLoginPanel()
     {

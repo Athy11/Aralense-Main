@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "719962795467",
+    "firebase_url": "https://aralenseapp-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "aralenseapp",
     "storage_bucket": "aralenseapp.firebasestorage.app"
   },
@@ -12,7 +13,12 @@
           "package_name": "com.arkcam.ARALENSEAPP"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "719962795467-hb7666k8ik79qpj0bmt1910pe1ovsv6g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBJlxFUOfbYfOet1YDPopMg-sAHTYRUn0E"
@@ -20,7 +26,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "719962795467-hb7666k8ik79qpj0bmt1910pe1ovsv6g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "719962795467-r3a5kpcvugs3grgalcp8s1g3c4l69eet.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.arkcam.ARALENSEAPP"
+              }
+            }
+          ]
         }
       }
     }

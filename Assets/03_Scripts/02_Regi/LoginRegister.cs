@@ -16,7 +16,7 @@ public class LoginRegister : MonoBehaviour
     public GameObject loginPanel, signupPanel, profilePanel, forgotPassPanel, notifPanel, posNotifPanel, homePanel, navbar, confirmationPanel, privacyPolicyPanel, settingsPanel, editProfPanel;
     public TMP_InputField loginEmail, loginUsername, loginPass, signupName, signupEmail, signupUsername, signupPass, signupCPass, forgetPassEmail;
     public TMP_Dropdown signupSection;
-    public TMP_Text notif_Title, notif_Message;
+    public TMP_Text notif_Title, notif_Message, posNotif_Title, posNotif_Message;
     public TMP_Text headUname, profileName, profileEmail, profileUsername, profileSection;
 
     Firebase.Auth.FirebaseAuth auth;
@@ -61,6 +61,7 @@ public class LoginRegister : MonoBehaviour
         signupPanel.SetActive(false);
         profilePanel.SetActive(false);
         forgotPassPanel.SetActive(false);
+        homePanel.SetActive(false);
     }
 
     public void ShowSignupPanel()
@@ -98,6 +99,7 @@ public class LoginRegister : MonoBehaviour
         forgotPassPanel.SetActive(false);
         homePanel.SetActive(true);
         navbar.SetActive(true);
+        settingsPanel.SetActive(false);
     }
 
     public void ShowEditProfile()
@@ -165,11 +167,7 @@ public class LoginRegister : MonoBehaviour
             ShowNotification("Error", "Please fill in all fields.");
             return;
         }
-        else
-        {
-            ShowPosNotification("Congrats", "Login successful.");
-            ShowHomePanel();
-        }
+        
         SignInUser(loginEmail.text, loginPass.text);
     }
 
@@ -206,20 +204,21 @@ public class LoginRegister : MonoBehaviour
         forgotPasswordSubmit(forgetPassEmail.text);
     }
 
-    Coroutine notifCoroutine;
+    private Coroutine posNotifCoroutine;
+    private Coroutine errorNotifCoroutine;
 
     public void ShowPosNotification(string title, string message)
     {
         posNotifPanel.SetActive(true);
-        notif_Title.text = "" + title;
-        notif_Message.text = "" + message;
+        posNotif_Title.text = "" + title;
+        posNotif_Message.text = "" + message;
 
-        if (notifCoroutine != null)
+        if (posNotifCoroutine != null)
         {
-            StopCoroutine(notifCoroutine);
+            StopCoroutine(posNotifCoroutine);
         }
 
-        notifCoroutine = StartCoroutine(posHideNotificationAfterDelay(3f));
+        posNotifCoroutine = StartCoroutine(posHideNotificationAfterDelay(3f));
     }
     private IEnumerator posHideNotificationAfterDelay(float delay)
     {
@@ -234,12 +233,12 @@ public class LoginRegister : MonoBehaviour
         notif_Title.text = "" + title;
         notif_Message.text = "" + message;
 
-        if (notifCoroutine != null)
+        if (errorNotifCoroutine != null)
         {
-            StopCoroutine(notifCoroutine);
+            StopCoroutine(errorNotifCoroutine);
         }
 
-        notifCoroutine = StartCoroutine(HideNotificationAfterDelay(3f));
+        errorNotifCoroutine = StartCoroutine(HideNotificationAfterDelay(3f));
     }
     private IEnumerator HideNotificationAfterDelay(float delay)
     {
@@ -255,8 +254,8 @@ public class LoginRegister : MonoBehaviour
     public void ClosePosNotification()
     {
         posNotifPanel.SetActive(false);
-        notif_Title.text = "";
-        notif_Message.text = "";
+        posNotif_Title.text = "";
+        posNotif_Message.text = "";
     }
 
     public void CloseProfile()
@@ -293,7 +292,7 @@ public class LoginRegister : MonoBehaviour
 
     public void BackFScene()
     {
-        SceneManager.LoadScene("01_FirstScene");
+        SceneManager.LoadScene("01_STARTING");
     }
 
     void CreateUser(string email, string password, string UserName)
@@ -324,18 +323,49 @@ public class LoginRegister : MonoBehaviour
         auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task => {
             if (task.IsCanceled)
             {
-                Debug.LogError("SignInWithEmailAndPasswordAsync was canceled.");
+                Debug.LogError("SignIn canceled");
+                ShowNotification("Error", "Login canceled.");
                 return;
             }
             if (task.IsFaulted)
             {
-                Debug.LogError("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception);
+                foreach (Exception exception in task.Exception.Flatten().InnerExceptions)
+                {
+                    if (exception is FirebaseException firebaseEx)
+                    {
+                        var errorCode = (AuthError)firebaseEx.ErrorCode;
+                        Debug.LogError("Firebase sign-in error: " + errorCode);
+
+                        switch (errorCode)
+                        {
+                            case AuthError.InvalidEmail:
+                                ShowNotification("Error", "Invalid email address.");
+                                break;
+                            case AuthError.WrongPassword:
+                                ShowNotification("Error", "Wrong password.");
+                                break;
+                            case AuthError.UserNotFound:
+                                ShowNotification("Error", "No user found with this email.");
+                                break;
+                            case AuthError.UserDisabled:
+                                ShowNotification("Error", "This user account has been disabled.");
+                                break;
+                            default:
+                                ShowNotification("Error", "Login failed: " + errorCode);
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        ShowNotification("Error", "Login failed.");
+                    }
+                }
                 return;
             }
 
+            // SUCCESS
             Firebase.Auth.AuthResult result = task.Result;
-            Debug.LogFormat("User signed in successfully: {0} ({1})",
-                result.User.DisplayName, result.User.UserId);
+            Debug.Log("User signed in successfully: " + result.User.UserId);
 
             headUname.text = "@" + result.User.DisplayName + "!";
             profileUsername.text = result.User.DisplayName;
@@ -343,9 +373,11 @@ public class LoginRegister : MonoBehaviour
             profileName.text = result.User.DisplayName;
             profileSection.text = signupSection.options[signupSection.value].text;
 
-
+            ShowPosNotification("Congrats", "Login successful.");
+            ShowHomePanel();
         });
     }
+
 
     void InitializeFirebase()
     {
@@ -424,7 +456,7 @@ public class LoginRegister : MonoBehaviour
                 profileName.text = "" + user.DisplayName;
                 profileSection.text = "" + signupSection.options[signupSection.value].text;
 
-                ShowLoginPanel();
+                ShowHomePanel();
             }
         }
     }

@@ -35,6 +35,8 @@ public class LoginRegister : MonoBehaviour
 
                 InitializeFirebase();
 
+            
+
                 void InitializeFirebase()
                 {
 
@@ -78,6 +80,7 @@ public class LoginRegister : MonoBehaviour
         signupPanel.SetActive(false);
         profilePanel.SetActive(true);
         forgotPassPanel.SetActive(false);
+        homePanel.SetActive(false);
     }
     public void HideProfilePanel()
     {
@@ -456,7 +459,19 @@ public class LoginRegister : MonoBehaviour
                 profileName.text = "" + user.DisplayName;
                 profileSection.text = "" + signupSection.options[signupSection.value].text;
 
-                ShowHomePanel();
+                string panelToOpen = PlayerPrefs.GetString("PanelToOpen", "Home");
+                switch (panelToOpen)
+                {
+                    case "Profile":
+                        ShowProfilePanel();
+                        break;
+                    case "Home":
+                    default:
+                        ShowHomePanel();
+                        break;
+                }
+
+                PlayerPrefs.DeleteKey("PanelToOpen");
             }
         }
     }

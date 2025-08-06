@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -25,11 +24,8 @@ public class begin : MonoBehaviour
     // Called when user confirms to quit the app
     public void QuitApp()
     {
-        #if UNITY_EDITOR
-                EditorApplication.isPlaying = false;
-        #else
-                    Application.Quit();
-        #endif
+        Application.Quit();
+       
     }
 
     // Called when user cancels exit

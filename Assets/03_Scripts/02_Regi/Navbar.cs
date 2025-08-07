@@ -28,11 +28,33 @@ public class Navbar : MonoBehaviour
         SceneManager.LoadScene("02_ACCOUNT");
     }
 
+    public void Lesson()
+    {
+        SceneManager.LoadScene("04_LESSON");
+    }
+
+    public void PrivacyPolicy()
+    {
+        // Store which panel to open when the scene loads
+        PlayerPrefs.SetString("PanelToOpen", "Privacy Policy");
+        PlayerPrefs.Save();
+
+        // Load the scene
+        SceneManager.LoadScene("02_ACCOUNT");
+    }
+
     public void OpenSettings()
     {
         if (settingsPanel != null)
         {
             settingsPanel.SetActive(!settingsPanel.activeSelf);
+        }
+    }
+    public void CloseSettings()
+    {
+        if (settingsPanel != null)
+        {
+            settingsPanel.SetActive(false);
         }
     }
 

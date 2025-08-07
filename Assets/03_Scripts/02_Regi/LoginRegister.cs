@@ -534,6 +534,9 @@ public class LoginRegister : MonoBehaviour
                     case "Profile":
                         ShowProfilePanel();
                         break;
+                    case "Privacy Policy":
+                        ShowPrivacyPolicyPanel();
+                        break;  
                     case "Home":
                     default:
                         ShowHomePanel();
@@ -553,7 +556,7 @@ public class LoginRegister : MonoBehaviour
                 Debug.LogError("SendPasswordResetEmailAsync was canceled.");
                 return;
             }
-            if (task.IsFaulted)
+            if (task.IsFaulted) 
             {
                 foreach (Exception exception in task.Exception.Flatten().InnerExceptions)
                 {

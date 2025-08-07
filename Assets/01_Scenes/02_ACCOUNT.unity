@@ -3310,7 +3310,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 262351790}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1104143713}
+        m_TargetAssemblyTypeName: LoginRegister, Assembly-CSharp
+        m_MethodName: ShowPrivacyPolicyPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &262351790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9891,12 +9903,12 @@ RectTransform:
   - {fileID: 21350832}
   - {fileID: 1291300108}
   - {fileID: 1807931549}
+  - {fileID: 1299561323}
   - {fileID: 328686611}
   - {fileID: 1653075171}
   - {fileID: 684189466}
   - {fileID: 1428109779}
   - {fileID: 336011819}
-  - {fileID: 1299561323}
   m_Father: {fileID: 983805308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

@@ -1100,13 +1100,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 436601449}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 436601452}
+        m_TargetAssemblyTypeName: Navbar, Assembly-CSharp
+        m_MethodName: CloseSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1949,9 +1949,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 436601449}
-        m_TargetAssemblyTypeName: LoginRegister, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 436601452}
+        m_TargetAssemblyTypeName: Navbar, Assembly-CSharp
+        m_MethodName: Lesson
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3216,8 +3216,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Navbar2, Assembly-CSharp
+      - m_Target: {fileID: 436601452}
+        m_TargetAssemblyTypeName: Navbar, Assembly-CSharp
         m_MethodName: BackToHome
         m_Mode: 1
         m_Arguments:
@@ -3484,8 +3484,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Navbar2, Assembly-CSharp
+      - m_Target: {fileID: 436601452}
+        m_TargetAssemblyTypeName: Navbar, Assembly-CSharp
         m_MethodName: Chatbot
         m_Mode: 1
         m_Arguments:
@@ -4381,7 +4381,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1706091441}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 436601452}
+        m_TargetAssemblyTypeName: Navbar, Assembly-CSharp
+        m_MethodName: Leaderboards
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1706091441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5274,8 +5286,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Navbar2, Assembly-CSharp
+      - m_Target: {fileID: 436601452}
+        m_TargetAssemblyTypeName: Navbar, Assembly-CSharp
         m_MethodName: OpenSettings
         m_Mode: 1
         m_Arguments:

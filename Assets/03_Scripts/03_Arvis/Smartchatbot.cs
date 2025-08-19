@@ -66,13 +66,13 @@ public class Smartchatbot : MonoBehaviour
           ""contents"": [
             {
               ""parts"": [
-                {""text"": ""You are Arvis, a friendly smart chatbot that will help guide MHS students in learning Computer Servicing. Keep answers under 3 sentences.""},
+                {""text"": ""You are Arvis, a friendly smart chatbot that will help guide MHS students in learning Computer Servicing. Keep answers under 1 sentence.""},
                 {""text"": """ + prompt + @"""}
               ]
             }
           ],
           ""generationConfig"": {
-            ""maxOutputTokens"": 150,
+            ""maxOutputTokens"": 100,
             ""temperature"": 0.7,
             ""topP"": 0.9
           }

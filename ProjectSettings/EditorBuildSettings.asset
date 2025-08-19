@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01_Scenes/04_LESSONQ4.unity
     guid: 832b400f689ece641a9fcddee75ba67c
+  - enabled: 1
+    path: Assets/01_Scenes/07_SIMULATION AR.unity
+    guid: 9ee629560a8b2cf41a2371f4828416de
   m_configObjects: {}

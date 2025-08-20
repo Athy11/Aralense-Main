@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="ledmonitor" size="1.000000 0.600157" />
+    <ImageTarget name="mousewireless" size="1.000000 0.562500" />
+    <ImageTarget name="mousecable" size="1.000000 0.562500" />
+    <ImageTarget name="lcdmonitor" size="1.000000 0.562500" />
+    <ImageTarget name="speaker" size="1.000000 0.562500" />
+    <ImageTarget name="desktop" size="1.000000 0.974522" />
+    <ImageTarget name="diskcleanup" size="1.000000 0.772500" />
+    <ImageTarget name="maintenancechecklist" size="1.000000 0.772500" />
+    <ImageTarget name="q1-m112" size="1.000000 0.772500" />
+    <ImageTarget name="q1-m11" size="1.000000 0.772500" />
+    <ImageTarget name="allinoneprinter" size="1.000000 0.562500" />
+    <ImageTarget name="deskjetprinter" size="1.000000 0.562500" />
+    <ImageTarget name="externalhdd" size="1.000000 0.562500" />
+    <ImageTarget name="flashdrive" size="1.000000 0.562500" />
+    <ImageTarget name="harddrive" size="1.000000 0.562500" />
+    <ImageTarget name="headphones" size="1.000000 0.562500" />
+    <ImageTarget name="keyboard" size="1.000000 0.562500" />
+    <ImageTarget name="microphone1" size="1.000000 0.562500" />
+    <ImageTarget name="webcam1" size="1.000000 0.562500" />
+  </Tracking>
+</QCARConfig>

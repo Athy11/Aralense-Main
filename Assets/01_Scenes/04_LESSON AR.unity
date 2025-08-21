@@ -440,6 +440,131 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsPanel: {fileID: 67289441}
+--- !u!1 &235573992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 235573993}
+  - component: {fileID: 235573996}
+  - component: {fileID: 235573995}
+  - component: {fileID: 235573994}
+  m_Layer: 0
+  m_Name: FLASH DRIVE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &235573993
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235573992}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.38, y: 0, z: -0.187}
+  m_LocalScale: {x: 0.20451, y: 0.20451, z: 0.20451}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1903677690}
+  m_Father: {fileID: 1508039513}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &235573994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235573992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 235573996}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: flashdrive
+  mDatasetName: Vuforia/AralenseQ1.xml
+  mCastedBehaviour: {fileID: 235573996}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!114 &235573995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235573992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StatusFilter: 1
+  UsePoseSmoothing: 0
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 3.3333333
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.3
+      value: 1
+      inSlope: 3.3333333
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  OnTargetFound:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTargetLost:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &235573996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235573992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PreviewVisible: 1
+  RuntimeOcclusion: 0
+  RuntimeCollider: 0
+  mTrackableName: flashdrive
+  mInitializedInEditor: 1
+  mDataSetPath: Vuforia/AralenseQ1.xml
+  mAspectRatio: 0.5625
+  mImageTargetType: 0
+  mWidth: 1
+  mHeight: 0.5625
+  mRuntimeTexture: {fileID: 0}
+  mMotionHint: 1
+  mTrackingOptimization: 0
+  mTrackingOptimizationNeedsUpgrade: 0
+  mPreview: {fileID: 235573994}
 --- !u!1 &329268836
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,7 +784,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1508039513}
+    m_TransformParent: {fileID: 1690677965}
     m_Modifications:
     - target: {fileID: -8700617353114198275, guid: a0f178767f7617943a1cdbc8db4d07c0, type: 3}
       propertyPath: m_IsActive
@@ -667,27 +792,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0f178767f7617943a1cdbc8db4d07c0, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.009592639
+      value: 0.046905477
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0f178767f7617943a1cdbc8db4d07c0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.009592639
+      value: 0.046905477
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0f178767f7617943a1cdbc8db4d07c0, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.009592639
+      value: 0.046905477
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0f178767f7617943a1cdbc8db4d07c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.623
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0f178767f7617943a1cdbc8db4d07c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.004000001
+      value: 0.01955895
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0f178767f7617943a1cdbc8db4d07c0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.01162783
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0f178767f7617943a1cdbc8db4d07c0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1265,31 +1390,31 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1508039513}
+    m_TransformParent: {fileID: 1200622341}
     m_Modifications:
     - target: {fileID: -3910990755373119420, guid: 200b3c7347a838b45bb20c4c3e4ae456, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.020519188
+      value: 0.18456024
       objectReference: {fileID: 0}
     - target: {fileID: -3910990755373119420, guid: 200b3c7347a838b45bb20c4c3e4ae456, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.020519182
+      value: 0.1845602
       objectReference: {fileID: 0}
     - target: {fileID: -3910990755373119420, guid: 200b3c7347a838b45bb20c4c3e4ae456, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.020519188
+      value: 0.18456024
       objectReference: {fileID: 0}
     - target: {fileID: -3910990755373119420, guid: 200b3c7347a838b45bb20c4c3e4ae456, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.861
+      value: -0.17995
       objectReference: {fileID: 0}
     - target: {fileID: -3910990755373119420, guid: 200b3c7347a838b45bb20c4c3e4ae456, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.004000001
+      value: 0.055
       objectReference: {fileID: 0}
     - target: {fileID: -3910990755373119420, guid: 200b3c7347a838b45bb20c4c3e4ae456, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.007
+      value: -0.073029
       objectReference: {fileID: 0}
     - target: {fileID: -3910990755373119420, guid: 200b3c7347a838b45bb20c4c3e4ae456, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2012,8 +2137,8 @@ Transform:
   m_GameObject: {fileID: 820339497}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.097, y: 0.026699, z: 0}
-  m_LocalScale: {x: 0.08888598, y: 0.08888598, z: 0.08888598}
+  m_LocalPosition: {x: 0.097, y: 0.023748, z: -0.013}
+  m_LocalScale: {x: 0.18316732, y: 0.18316732, z: 0.18316732}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2134101392}
@@ -3454,6 +3579,131 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 1161676264}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!1 &1200622340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1200622341}
+  - component: {fileID: 1200622344}
+  - component: {fileID: 1200622343}
+  - component: {fileID: 1200622342}
+  m_Layer: 0
+  m_Name: DESKTOP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1200622341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200622340}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.076, y: 0, z: -0.208}
+  m_LocalScale: {x: 0.15147, y: 0.15147, z: 0.15147}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 589587128}
+  m_Father: {fileID: 1508039513}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1200622342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200622340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1200622344}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: desktop
+  mDatasetName: Vuforia/AralenseQ1.xml
+  mCastedBehaviour: {fileID: 1200622344}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!114 &1200622343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200622340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StatusFilter: 1
+  UsePoseSmoothing: 0
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 3.3333333
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.3
+      value: 1
+      inSlope: 3.3333333
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  OnTargetFound:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTargetLost:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1200622344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200622340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PreviewVisible: 1
+  RuntimeOcclusion: 0
+  RuntimeCollider: 0
+  mTrackableName: desktop
+  mInitializedInEditor: 1
+  mDataSetPath: Vuforia/AralenseQ1.xml
+  mAspectRatio: 0.974522
+  mImageTargetType: 0
+  mWidth: 1
+  mHeight: 0.974522
+  mRuntimeTexture: {fileID: 0}
+  mMotionHint: 1
+  mTrackingOptimization: 0
+  mTrackingOptimizationNeedsUpgrade: 0
+  mPreview: {fileID: 1200622342}
 --- !u!1 &1207348073
 GameObject:
   m_ObjectHideFlags: 0
@@ -3816,6 +4066,131 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285917392}
   m_CullTransparentMesh: 1
+--- !u!1 &1315665478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1315665479}
+  - component: {fileID: 1315665482}
+  - component: {fileID: 1315665481}
+  - component: {fileID: 1315665480}
+  m_Layer: 0
+  m_Name: HARD DRIVE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1315665479
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315665478}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.3683, y: 0, z: 0.0059}
+  m_LocalScale: {x: 0.19567, y: 0.19567, z: 0.19567}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2019274326}
+  m_Father: {fileID: 1508039513}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1315665480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315665478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1315665482}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: harddrive
+  mDatasetName: Vuforia/AralenseQ1.xml
+  mCastedBehaviour: {fileID: 1315665482}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!114 &1315665481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315665478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StatusFilter: 1
+  UsePoseSmoothing: 0
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 3.3333333
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.3
+      value: 1
+      inSlope: 3.3333333
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  OnTargetFound:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTargetLost:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1315665482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315665478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PreviewVisible: 1
+  RuntimeOcclusion: 0
+  RuntimeCollider: 0
+  mTrackableName: harddrive
+  mInitializedInEditor: 1
+  mDataSetPath: Vuforia/AralenseQ1.xml
+  mAspectRatio: 0.5625
+  mImageTargetType: 0
+  mWidth: 1
+  mHeight: 0.5625
+  mRuntimeTexture: {fileID: 0}
+  mMotionHint: 1
+  mTrackingOptimization: 0
+  mTrackingOptimizationNeedsUpgrade: 0
+  mPreview: {fileID: 1315665480}
 --- !u!1 &1354906079
 GameObject:
   m_ObjectHideFlags: 0
@@ -4619,13 +4994,13 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1161676261}
-  - {fileID: 1903677690}
-  - {fileID: 2019274326}
-  - {fileID: 1637054998}
-  - {fileID: 420621496}
-  - {fileID: 589587128}
   - {fileID: 820339498}
   - {fileID: 1354906080}
+  - {fileID: 235573993}
+  - {fileID: 1200622341}
+  - {fileID: 1315665479}
+  - {fileID: 1939512307}
+  - {fileID: 1690677965}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1520516504
@@ -4902,7 +5277,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1508039513}
+    m_TransformParent: {fileID: 1939512307}
     m_Modifications:
     - target: {fileID: -6689036041284674117, guid: 12379ec356ff3ad4589bb058ba5ecf63, type: 3}
       propertyPath: m_Name
@@ -4910,27 +5285,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 12379ec356ff3ad4589bb058ba5ecf63, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.05628319
+      value: 0.25332245
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 12379ec356ff3ad4589bb058ba5ecf63, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0562832
+      value: 0.25332248
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 12379ec356ff3ad4589bb058ba5ecf63, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.0562832
+      value: 0.2533225
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 12379ec356ff3ad4589bb058ba5ecf63, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5547
+      value: -0.007
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 12379ec356ff3ad4589bb058ba5ecf63, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.004
+      value: 0.007
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 12379ec356ff3ad4589bb058ba5ecf63, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0136
+      value: -0.023
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 12379ec356ff3ad4589bb058ba5ecf63, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5469,13 +5844,138 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678964105}
   m_CullTransparentMesh: 1
+--- !u!1 &1690677964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1690677965}
+  - component: {fileID: 1690677968}
+  - component: {fileID: 1690677967}
+  - component: {fileID: 1690677966}
+  m_Layer: 0
+  m_Name: MONITOR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1690677965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690677964}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.616, y: 0, z: 0}
+  m_LocalScale: {x: 0.20451, y: 0.20451, z: 0.20451}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 420621496}
+  m_Father: {fileID: 1508039513}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1690677966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690677964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1690677968}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: ledmonitor
+  mDatasetName: Vuforia/AralenseQ1.xml
+  mCastedBehaviour: {fileID: 1690677968}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!114 &1690677967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690677964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StatusFilter: 1
+  UsePoseSmoothing: 0
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 3.3333333
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.3
+      value: 1
+      inSlope: 3.3333333
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  OnTargetFound:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTargetLost:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1690677968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690677964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PreviewVisible: 1
+  RuntimeOcclusion: 0
+  RuntimeCollider: 0
+  mTrackableName: ledmonitor
+  mInitializedInEditor: 1
+  mDataSetPath: Vuforia/AralenseQ1.xml
+  mAspectRatio: 0.600157
+  mImageTargetType: 0
+  mWidth: 1
+  mHeight: 0.600157
+  mRuntimeTexture: {fileID: 0}
+  mMotionHint: 1
+  mTrackingOptimization: 0
+  mTrackingOptimizationNeedsUpgrade: 0
+  mPreview: {fileID: 1690677966}
 --- !u!1001 &1903677689
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1508039513}
+    m_TransformParent: {fileID: 235573993}
     m_Modifications:
     - target: {fileID: -6689036041284674117, guid: 0e8d45ad0fbe1234b87d059add70097a, type: 3}
       propertyPath: m_Name
@@ -5483,27 +5983,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 0e8d45ad0fbe1234b87d059add70097a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.021372493
+      value: 0.10450585
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 0e8d45ad0fbe1234b87d059add70097a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.021372491
+      value: 0.10450583
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 0e8d45ad0fbe1234b87d059add70097a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.021372491
+      value: 0.10450583
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 0e8d45ad0fbe1234b87d059add70097a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4285
+      value: -0.035
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 0e8d45ad0fbe1234b87d059add70097a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.004000001
+      value: 0.302
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 0e8d45ad0fbe1234b87d059add70097a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.01162783
+      value: -0.157
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 0e8d45ad0fbe1234b87d059add70097a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5787,6 +6287,131 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917301830}
   m_CullTransparentMesh: 1
+--- !u!1 &1939512306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1939512307}
+  - component: {fileID: 1939512310}
+  - component: {fileID: 1939512309}
+  - component: {fileID: 1939512308}
+  m_Layer: 0
+  m_Name: MOUSE WIRELESS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1939512307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939512306}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.375, y: 0, z: -0.361}
+  m_LocalScale: {x: 0.22218, y: 0.22218, z: 0.22218}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1637054998}
+  m_Father: {fileID: 1508039513}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1939512308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939512306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1939512310}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: mousewireless
+  mDatasetName: Vuforia/AralenseQ1.xml
+  mCastedBehaviour: {fileID: 1939512310}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!114 &1939512309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939512306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StatusFilter: 1
+  UsePoseSmoothing: 0
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 3.3333333
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.3
+      value: 1
+      inSlope: 3.3333333
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  OnTargetFound:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTargetLost:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1939512310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939512306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PreviewVisible: 1
+  RuntimeOcclusion: 0
+  RuntimeCollider: 0
+  mTrackableName: mousewireless
+  mInitializedInEditor: 1
+  mDataSetPath: Vuforia/AralenseQ1.xml
+  mAspectRatio: 0.5625
+  mImageTargetType: 0
+  mWidth: 1
+  mHeight: 0.5625
+  mRuntimeTexture: {fileID: 0}
+  mMotionHint: 1
+  mTrackingOptimization: 0
+  mTrackingOptimizationNeedsUpgrade: 0
+  mPreview: {fileID: 1939512308}
 --- !u!1 &1995019768
 GameObject:
   m_ObjectHideFlags: 0
@@ -5869,7 +6494,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1508039513}
+    m_TransformParent: {fileID: 1315665479}
     m_Modifications:
     - target: {fileID: -6689036041284674117, guid: 059c03cfa1c6f0346af4cc3172d67b4f, type: 3}
       propertyPath: m_Name
@@ -5877,27 +6502,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 059c03cfa1c6f0346af4cc3172d67b4f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.31940997
+      value: 3.536902
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 059c03cfa1c6f0346af4cc3172d67b4f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.31940997
+      value: 3.536902
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 059c03cfa1c6f0346af4cc3172d67b4f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.31941
+      value: 3.536902
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 059c03cfa1c6f0346af4cc3172d67b4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4851
+      value: 0.0069983
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 059c03cfa1c6f0346af4cc3172d67b4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0224
+      value: 0.14002
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 059c03cfa1c6f0346af4cc3172d67b4f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0101
+      value: -0.068
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 059c03cfa1c6f0346af4cc3172d67b4f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6295,7 +6920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 699c36d4c8d5cfb4cb26a8a2133c4eee, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.017571
+      value: 0.084
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 699c36d4c8d5cfb4cb26a8a2133c4eee, type: 3}
       propertyPath: m_LocalRotation.w

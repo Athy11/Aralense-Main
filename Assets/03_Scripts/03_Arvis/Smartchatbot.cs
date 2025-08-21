@@ -10,8 +10,8 @@ public class Smartchatbot : MonoBehaviour
 {
     public TMP_InputField promptField;
     public TMP_Text chatDisplay;
-    public string apiKey = [API_KEY];
-    public string apiUrl = [API_URL];
+    public string apiKey = "AIzaSyCRr-gLLc1jsRYi_IKPody0o3ltk-RVZ0w";
+    public string apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
     public ScrollRect scrollRect;
     public RectTransform content;
     public GameObject newTextPrefab;

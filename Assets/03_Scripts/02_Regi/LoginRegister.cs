@@ -21,7 +21,7 @@ public class LoginRegister : MonoBehaviour
     public TMP_Dropdown signupSection;
     public TMP_Text notif_Title, notif_Message, posNotif_Title, posNotif_Message;
     public TMP_Text headUname, profileName, profileEmail, profileUsername, profileSection;
-    public string GoogleWebAPI = [GOOGLE_WEB_API];
+    public string GoogleWebAPI = "719962795467-hb7666k8ik79qpj0bmt1910pe1ovsv6g.apps.googleusercontent.com";
    
 
     private GoogleSignInConfiguration configuration;

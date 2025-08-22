@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="deskjetprinter" size="1.000000 0.562500" />
+    <ImageTarget name="mousewireless" size="1.000000 0.562500" />
+    <ImageTarget name="mousecabled" size="1.000000 0.562500" />
+    <ImageTarget name="webcam1" size="1.000000 0.562500" />
+    <ImageTarget name="microphone1" size="1.000000 0.562500" />
+    <ImageTarget name="gameconsole" size="1.000000 0.562500" />
+    <ImageTarget name="headphones" size="1.000000 0.562500" />
+    <ImageTarget name="ipad" size="1.000000 1.000000" />
+    <ImageTarget name="barcodescanner" size="1.000000 0.562500" />
+    <ImageTarget name="macbook" size="1.000000 1.000000" />
+    <ImageTarget name="digitalcamera" size="1.000000 0.562500" />
+    <ImageTarget name="videocard" size="1.000000 0.562500" />
+    <ImageTarget name="joystick" size="1.000000 0.562500" />
+    <ImageTarget name="powersupply" size="1.000000 0.562500" />
+    <ImageTarget name="motherboard" size="1.000000 0.562500" />
+    <ImageTarget name="cpu" size="1.000000 0.562500" />
+    <ImageTarget name="speaker" size="1.000000 0.562500" />
+    <ImageTarget name="smartwatch" size="1.000000 1.000000" />
+  </Tracking>
+</QCARConfig>
